@@ -10,5 +10,5 @@ url = "http://www.lua.org"
 maintainer = "Peter Drahoš"
 
 depends = {
-  "luajit >= 2",
+  "luajit>=2",
 }
