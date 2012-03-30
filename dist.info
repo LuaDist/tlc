@@ -1,0 +1,14 @@
+--- This file is part of LuaDist project
+
+name = "tlc"
+version = "0.0.1"
+
+desc = "The Tiny Lua Cocoa Bridge"
+author = "Fjölnir Ásgeirsson"
+license = "MIT/X11"
+url = "http://www.lua.org"
+maintainer = "Peter Drahoš"
+
+depends = {
+  "luajit >= 2",
+}
