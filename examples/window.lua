@@ -1,14 +1,13 @@
 -- Ported from LuaCocoa's MinimalAppKit example
 -- Creates a quit menu item and a window. Very minimal indeed.
 
-package.path = package.path .. ';../?.lua'
+package.path = package.path .. ';../?/init.lua'
 local objc = require("objc")
-objc.loadFramework("AppKit")
+local bs = require("objc.BridgeSupport")
+bs.loadFramework("Foundation", true)
+bs.loadFramework("AppKit", true)
+bs.loadFramework("ApplicationServices")
 setmetatable(_G, {__index=objc})
-
-local NSApplicationActivationPolicyRegular = 0
-local NSTitledWindowMask = 1
-local NSBackingStoreBuffered = 2
 
 local NSApp = NSApplication:sharedApplication()
 NSApp:setActivationPolicy(NSApplicationActivationPolicyRegular)
